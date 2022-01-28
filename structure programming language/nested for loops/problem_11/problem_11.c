@@ -7,18 +7,16 @@ int main()
     int j;
     int rows;
 
-    printf("Enter number of rows: ");
+    printf("Enter the number of rows: ");
     scanf("%d", &rows);
 
     for(i=1; i<=rows; i++)
     {
-
-        for(j=i; j>=1; j--)
+        for(j=1; j<=rows; j++)
         {
-
-            if(j%2==0)
+            if(j<=rows-i)
             {
-                printf("$ ");
+                printf("- ");
             }
             else
             {
@@ -26,8 +24,7 @@ int main()
             }
         }
         printf("\n");
-
     }
-    return 0;
 
+    return 0;
 }
