@@ -1,10 +1,11 @@
 #include<stdio.h>
+#include<stdbool.h>
 
-int main() {
+int main()
+{
 
     int A[3][3];
     int B[3][3];
-    int C[3][3];
     int row;
     int col;
 
@@ -22,26 +23,21 @@ int main() {
         }
     }
 
-    for(int i=0; i<3; i++) {
-        for(int j=0; j<3; j++) {
-            C[i][j] = 0;
-            for(int k=0; k<3; k++)
-            {
-                C[i][j] += A[i][k] * B[k][j];
-            }
-        }
-    }
-
-    printf("Multiplication of two matrices\n");
+    bool isEqual=true;
     for(row=0; row<3; row++)
     {
         for(col=0; col<3; col++)
         {
-            printf("%d ", C[row][col]);
+            if(A[row][col] != B[row][col]){
+                isEqual = false;
+            }
         }
-        printf("\n");
     }
-
+    if(isEqual) {
+        printf("These two matrices are identical");
+    } else {
+        printf("These two matrices are not identical");
+    }
     return 0;
 }
 
