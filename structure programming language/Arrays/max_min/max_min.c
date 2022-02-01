@@ -1,21 +1,54 @@
 #include<stdio.h>
 
 
-int main() {
+int main()
+{
 
-    int i;
-    int numbers[] = {1, 4, 3, 2, 12, 3, 0, 8};
-    int temp = numbers[0];
+    int n;
+    printf("Enter the number of elements in the array: ");
+    scanf("%d", &n);
 
-    int length = sizeof(numbers) / sizeof(numbers[0]);
-
-    for(i=1; i<length; i++) {
-
-            if (numbers[i] > temp) {
-                temp = numbers[i];
-            }
+    int numbers[n];
+    printf("Enter %d elements for the array", n);
+    for(int i=0; i<n; i++)
+    {
+        scanf("%d", &numbers[i]);
     }
-    printf("%d is large", temp);
+    int max = numbers[0];
+    int min = numbers[0];
+    for(int i=0; i<n; i++)
+    {
+        if(max < numbers[i])
+        {
+            max = numbers[i];
+        }
+        if(min > numbers[i])
+        {
+            min = numbers[i];
+        }
+    }
+    printf("Maximum value is: %d\n", max);
+    printf("Minimum value is: %d", min);
 
     return 0;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
