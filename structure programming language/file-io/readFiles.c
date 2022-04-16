@@ -5,7 +5,6 @@ int main() {
     fptr = fopen("hello.txt", "r");
     char str;
     str=fgetc(fptr);
-
     while(str != EOF) {
         printf("%c", str);
         str=fgetc(fptr);

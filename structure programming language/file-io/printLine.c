@@ -3,7 +3,6 @@
 int main() {
     FILE *fptr;
     int spaceCounter = 0;
-    char line[100];
     int counter=0;
     char c;
     fptr = fopen("hello.txt", "r");

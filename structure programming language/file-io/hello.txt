@@ -1,2 +1,4 @@
-ami bhalo
-ami bhalo na
+
+hello
+how are you
+hi
